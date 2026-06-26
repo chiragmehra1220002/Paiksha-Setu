@@ -17,3 +17,5 @@ Developed a fully responsive educational landing page named **Pariksha Setu** by
  <img width="1366" height="605" alt="image" src="https://github.com/user-attachments/assets/050c7318-2459-445d-b2ac-5d24c0cf87c2" />
 
   ![alt text](image-1.png)
+  <img width="1351" height="600" alt="image" src="https://github.com/user-attachments/assets/f5d87c84-9de3-41d3-b900-009568a81222" />
+
