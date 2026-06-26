@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary1: #fff;
+  --priamry-bg1: #0e99e4;
+  --primary-bg2: #f4a707;
+  --secondary-bg1: rgba(14, 153, 228, 0.24);
+  --secondary-bg2: #00285e;
+  --secondary-gradient1: linear-gradient(
+    90deg,
+    rgba(0, 7, 23, 0.94) 0%,
+    rgba(0, 7, 23, 0.82) 34%,
+    rgba(0, 7, 23, 0.48) 63%,
+    rgba(0, 7, 23, 0.18) 100%
+  );
+  --secondary-gradient2: linear-gradient(180deg, #000718 0%, #033c9d 100%);
+  --secondary-gradient3: linear-gradient(
+    270deg,
+    rgba(0, 8, 24, 0) 36.07%,
+    #000717 87.28%
+  );
+}
+/*========= COMMON CSS =========== */
+
+@font-face {
+  font-family: "Albra Sans TRIAL";
+  src: url("./fonts/AlbraSansTRIAL-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Albra Sans TRIAL";
+  src: url("./fonts/AlbraSansTRIAL-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.heading-large {
+  font-family: "Albra Sans TRIAL", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--primary1);
+  max-width: 623px;
+  line-height: normal;
+}
+.heading-medium {
+  color: var(--primary1);
+  font-family: "Albra Sans TRIAL";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.heading-small {
+  color: var(--primary1);
+  font-family: "Albra Sans TRIAL";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.text-li {
+  color: var(--primary1);
+  font-family: "Albra Sans TRIAL";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 0px !important;
+}
+/* .container-fluid {
+  position: relative;
+  z-index: 3;
+} */
+/* Header Section CSS */
+
+.pariksha-setu-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  min-height: 106px;
+
+  background-color: var(--primary1);
+  z-index: 999;
+}
+.pariksha-setu-nav .main-nav {
+  width: 80%;
+}
+.pariksha-setu-nav .main-nav .left-nav-image {
+  width: 98.833px;
+  height: 60.238px;
+  object-fit: contain;
+}
+
+.pariksha-setu-nav .main-nav .nav-text {
+  color: #000;
+  text-align: center;
+  font-family: "Ancizar Serif";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.my-container {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+/* Banner Section CSS  */
+
+.banner-section {
+  position: relative;
+  overflow: hidden;
+  width: min(100%, 1530px);
+
+  min-height: 574px;
+  margin: 106px auto 0;
+}
+.banner-section .bg-video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.banner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-gradient1);
+  z-index: 2;
+  pointer-events: none;
+}
+.banner-section .bg-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-section .banner-content {
+  position: relative;
+  z-index: 3;
+}
+
+.banner-section .banner-content .questions-part {
+  gap: 32px;
+
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: var(--secondary-bg1);
+}
+.banner-section .banner-content .para {
+  margin-bottom: 20px;
+}
+.banner-section .banner-content .question-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.banner-section .banner-content .question-item .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary1);
+  flex-shrink: 0;
+}
+.para {
+  color: var(--primary1);
+  font-family: "Ancizar Serif";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 552px;
+}
+.banner-section .lower-part-banner .free-to {
+  padding: 10px 20px;
+
+  border-radius: 5px;
+  background: var(--secondary-bg1);
+}
+
+.button-box .btn-sky-blue,
+.button-box .btn-ylw {
+  display: inline-flex;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--priamry-bg1);
+  cursor: pointer;
+  outline: none;
+}
+.button-box .btn-ylw {
+  background: var(--primary-bg2);
+}
+.button-box .text-button {
+  color: #fff;
+  font-family: "Albra Sans TRIAL";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+}
+.border-white {
+  width: 100%;
+
+  height: 4px;
+}
+/* Scholarship Section CSS */
+
+.scholarship-section {
+  background: var(--secondary-gradient2);
+}
+.scholarship-left-part,
+.scholarship-right-part {
+  height: 100%;
+  min-height: 126px;
+}
+.scholarship-section .scholarship-upto .scholarship-left-part {
+  padding: 15px;
+  background: #003781;
+  border-radius: 20px 0px 0px 20px;
+}
+.scholarship-section .scholarship-upto .scholarship-left-part .white-box {
+  width: 98px;
+  border-radius: 10px;
+  background: var(--primary1);
+}
+.scholarship-right-part .para {
+  margin-bottom: 0px;
+}
+.scholarship-section .scholarship-upto .scholarship-right-part {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: stretch;
+  background: var(--secondary-bg2);
+  border-radius: 0px 20px 20px 0px;
+  padding: 15px;
+}
+.scholarship-section .scholarship-upto .scholarship-right-part .para {
+  max-width: 391px;
+}
+.scholarship-section .scholarship-upto .scholarship-right-part .white-box {
+  align-self: flex-start;
+  margin-top: -15px;
+  margin-bottom: 12px;
+}
+
+.scholarship-section .scholarship-upto .scholarship-right-part .white-box {
+  position: relative;
+  margin-top: -15px;
+  margin-right: 20px;
+  width: 102px;
+  height: 114px;
+  flex-shrink: 0;
+}
+
+.scholarship-upto .scholarship-right-part .white-box svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.scholarship-upto .scholarship-right-part .svg-text {
+  top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.scholarship-upto .scholarship-right-part .svg-text .heading-medium {
+  color: #f4a707;
+}
+
+.scholarship-upto .scholarship-right-part .svg-text .scholarship-text {
+  color: #464646;
+  text-align: center;
+  font-family: "Albra Sans TRIAL";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.scholarship-section .grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.scholarship-section .grid-cards .grid-card {
+  position: relative;
+  max-width: 387px;
+  min-height: 231px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #074dab;
+  background: var(--secondary-bg2);
+  box-shadow:
+    0 0 4px 0 rgba(0, 0, 0, 0.04),
+    0 8px 16px 0 rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.scholarship-section .grid-cards .grid-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: #003781;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+
+  z-index: -1;
+}
+
+.scholarship-section .grid-cards .grid-card:hover::before {
+  transform: scaleX(1);
+}
+.scholarship-hat-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.scholarship-section .grid-cards .grid-card .icon-box {
+  width: 57px;
+  height: 57px;
+  border-radius: 5px;
+  background: var(--secondary-bg1);
+}
+.scholarship-section .grid-cards .grid-card .para {
+  max-width: 304px;
+}
+
+/*Ready To Earn CSS */
+
+.ready-to-earn {
+  width: min(100%, 1533px);
+  min-height: 519px;
+  aspect-ratio: 192 / 65;
+  margin: 0 auto;
+  background-image: url("./ready-to-earn-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+img {
+  display: block;
+}
+.ready-to-earn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--secondary-gradient3);
+  z-index: 1;
+}
+.ready-to-earn .para {
+  max-width: 483px;
+}
+.ready-to-earn .lower-part .icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: var(--secondary-bg1);
+}
+
+@media (max-width: 576px) {
+  .banner-section {
+    width: 100%;
+    height: auto;
+    min-height: 574px;
+  }
+
+  .banner-section::before {
+    background: var(--secondary-gradient1);
+  }
+
+  .ready-to-earn {
+    width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .heading-large {
+    font-size: 35px;
+    max-width: 323px;
+    text-align: start;
+  }
+  .heading-medium {
+    font-size: 20px;
+  }
+
+  .scholarship-section .grid-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .scholarship-section .grid-cards .grid-card {
+    padding: 15px;
+  }
+  .pariksha-setu-nav .text-li {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .para {
+    font-size: 14px;
+  }
+  .pariksha-setu-nav .main-nav {
+    width: 100%;
+  }
+  .pariksha-setu-nav .main-nav .nav-text {
+    font-size: 15px;
+    white-space: wrap;
+  }
+
+  .pariksha-setu-nav .main-nav .left-nav-image {
+    width: auto;
+    height: auto;
+  }
+
+  .pariksha-setu-nav .main-nav .left-nav-image img {
+    max-width: 120px;
+    height: auto;
+  }
+  .banner-section .banner-content .para {
+    margin-bottom: 10px;
+  }
+
+  .scholarship-section .scholarship-upto .scholarship-left-part .white-box {
+    width: 60px;
+    height: 50px;
+  }
+  .scholarship-section .scholarship-upto .scholarship-left-part {
+    padding: 10px;
+    border-radius: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .scholarship-section .scholarship-icon {
+    width: 25px;
+    height: 20px;
+  }
+  .white-box-icon {
+    width: 49px;
+    height: 49px;
+  }
+  .scholarship-section .scholarship-upto .scholarship-right-part {
+    gap: 40px;
+
+    padding: 10px;
+    border-radius: 10px 10px;
+  }
+  .scholarship-section .scholarship-upto .scholarship-right-part .white-box {
+    margin-top: -10px;
+    margin-right: 10px;
+  }
+  .banner-section .banner-content .questions-part {
+    display: grid !important;
+    background: transparent;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .banner-section .banner-content .question-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 16px;
+    justify-content: center;
+    background: var(--secondary-bg1);
+  }
+  .button-box .btn-sky-blue,
+  .button-box .btn-ylw {
+    padding: 15px 10px;
+    width: fit-content;
+  }
+  .button-box .text-button {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .scholarship-section .svg-scholarship {
+    width: 40px;
+    height: 40px;
+  }
+  .scholarship-upto .scholarship-right-part .svg-text .scholarship-text {
+    font-size: 14px;
+  }
+}
